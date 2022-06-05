@@ -43,3 +43,21 @@ a {
     width: 86px;
     height: 43px;
 }
+
+.sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 2;
+    margin-bottom: 5px;
+}
+.sidebar img {
+    width: 30px;
+    height:30px;
+    display: block;
+}
+
+
+/* Sidebar */
+#sidebar-design {
+    height: 80px;
+}
