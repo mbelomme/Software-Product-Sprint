@@ -1,50 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <div class="header">
-            <a id="header"></a>
-            <a href="#header"><img src="/images/logo.png" alt=""></a>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script async src="script.js"></script>
+  </head>
+  <body>
+    <div class="header">
+        <a href="#home"><img src="/images/logo.png" alt=""></a>
 
-            <ol>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ol>
-        </div>
+        <ol>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ol>
+    </div>
 
-        <div class="sidebar">
-        <a href="https://www.linkedin.com/in/msbelomme/"><img src="/images/linkedin.png" alt=""></a>
-        <a href="https://github.com/mbelomme"><img src="/images/github.png" alt=""></a>
-        <img id="sidebar-design" src="/images/sidebar-design.png" alt="">
-        </div>
+    <div class="sidebar">
+      <a href="https://www.linkedin.com/in/msbelomme/"><img src="/images/linkedin.png" alt=""></a>
+      <a href="https://github.com/mbelomme"><img src="/images/github.png" alt=""></a>
+      <img id="sidebar-design" src="/images/sidebar-design.png" alt="">
+    </div>
 
-        <div class="content">
-        <div class="about">
-            <a href="about"></a>
-            <p>Hi, my name is</p>
-            <h1>Marielle Belomme</h1>
-            <h1></h1>
-        </div>
+    <div class="content">
+      <div id="home">
+        <p class="name">Hi, my name is</p>
+        <h1>Marielle Belomme.</h1>
+        <h1 class="statements"></h1>
+        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
 
-        <div class="experience">
-            <a href="experience"></a>
-        </div>
+      <div id="about">
+        <h3 class="num">01. </h3>
+        <h2 class="sub-title">About Me</h2>
+      </div>
 
-        <div class="projects">
-            <a href="projects"></a>
-        </div>
+      <div id="experience">
+        <h3 class="num">02. </h3>
+        <h2 class="sub-title">Where I've Worked</h2>
+        <div class="job-container"> 
+          <div class="jobs-sidebar">
+            <button id="Comcast" onclick="job('Comcast')">Comcast</button>
+            <button id="Cisco" onclick="job('Cisco')">Cisco</button>
+            <button id="Google" onclick="job('Google')">Google</button>
+            <button id="Hack4Impact" onclick="job('Hack4Impact')">Hack4Impact</button>
+          </div>
 
-        <div class="contact">
-            <a href="contact"></a>
-        </div>
-        </div>
-    </body>
+          <div class="job">
+            <h3 id="title"></h3>
+            <h3 id="company"></h3>
+            <p id="date"></p>
+            <ul id="description"></ul>
+          </div>
+        </div>  
+
+
+      </div>
+
+      <div id="projects" class="projects">
+        <a href="projects"></a>
+        <h3 class="num">03. </h3>
+        <h2 class="sub-title">Some Things I've Built</h2>
+      </div>
+
+      <div id="contact">
+        <h3 class="num">04.</h3>
+        <h2 class="sub-title">Contact Me</h2>
+      </div>
+    </div>
+  </body>
 </html>

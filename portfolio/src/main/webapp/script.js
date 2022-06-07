@@ -12,17 +12,79 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const aboutMe =
-      ["I am 5'4.", 'My last name is French for "beautiful man".', 'I cannot swim.', 'My first name means "bitter" in French.'];
+setInterval(changeStatement, 700);
+let shownJob = "Comcast";
+// let scrollingActive = false;
 
-  // Pick a random greeting.
-  const fact = aboutMe[Math.floor(Math.random() * greetings.length)];
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = fact;
+// Header
+// document.getElementsByTagName('body').onscroll = function (){
+//     console.log("scrolled");
+//     document.getElementById('header').style.position = "sticky";
+// };
+
+
+// setInterval(() => {
+//     scrollingActive
+//     if (document.click == true) {
+//         console.log("scroll");
+//         document.querySelector('.header').style.position = "sticky";
+//     } if (false) {
+//         console.log("no scroll");
+//         document.querySelector('.header').style.position = "static";
+//     }
+// }, 300);
+
+
+// Home
+function changeStatement() {
+    const statements = [
+        "I am 5'4.", 
+        'My last name is French for "beautiful man".', 
+        'I cannot swim.', 
+        'My first name means "bitter" in French.'
+    ];
+  
+    // Pick a random fun fact.
+    const statement = statements[Math.floor(Math.random() * statements.length)];
+  
+    // Add it to the page.
+    const statementContainer = document.getElementById('statements');
+    statementContainer.innerHTML = statement;
+}
+
+
+
+// Experience
+window.addEventListener('load', () => job("Comcast"));
+
+const address = fetch("./jobs.json")
+.then(response => {
+    return response.json();
+});
+
+function job(input){
+    document.getElementById(shownJob).style.backgroundColor = "transparent";
+    document.getElementById(input).style.backgroundColor = "coral";
+    getJob(input);
+    shownJob = input;
+}
+
+async function getJob(input) {
+    try {
+        const jobs = await address;
+        document.getElementById('company').innerHTML = "@ " + jobs[input].company;
+        document.getElementById('title').innerHTML = jobs[input].title;
+        document.getElementById('date').innerHTML = jobs[input].date;
+
+        document.getElementById('description').innerHTML = ""
+        for (x of jobs[input].description) {
+            let list = document.createElement('li');
+            let node = document.createTextNode(x);
+            list.appendChild(node);
+            document.getElementById('description').appendChild(list);
+        }
+    } catch (err) {
+      console.log(err);
+    }
 }
