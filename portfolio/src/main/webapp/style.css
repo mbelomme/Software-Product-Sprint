@@ -37,8 +37,8 @@ a {
 
 .header img {
     margin: 17px;
-    width: 86px;
-    height: 43px;
+    max-width: 86px;
+    max-height: 100%;
 }
 
 
@@ -138,4 +138,7 @@ a {
 
 
 /* Contact */
+
+
+
 

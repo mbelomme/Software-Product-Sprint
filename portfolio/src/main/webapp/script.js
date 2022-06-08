@@ -12,10 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-setInterval(changeStatement, 700);
 let shownJob = "Comcast";
 // let scrollingActive = false;
 
+// setInterval((changeStatement(), console.log, 700);
+console.log('after')
 
 // Header
 // document.getElementsByTagName('body').onscroll = function (){
@@ -36,6 +37,15 @@ let shownJob = "Comcast";
 // }, 300);
 
 
+
+// On Load
+window.addEventListener('load', () => {
+    job("Comcast");
+    setInterval(changeStatement, 700);
+});
+
+
+
 // Home
 function changeStatement() {
     const statements = [
@@ -49,15 +59,13 @@ function changeStatement() {
     const statement = statements[Math.floor(Math.random() * statements.length)];
   
     // Add it to the page.
-    const statementContainer = document.getElementById('statements');
+    const statementContainer = document.querySelector('.statements');
     statementContainer.innerHTML = statement;
 }
 
 
 
 // Experience
-window.addEventListener('load', () => job("Comcast"));
-
 const address = fetch("./jobs.json")
 .then(response => {
     return response.json();
