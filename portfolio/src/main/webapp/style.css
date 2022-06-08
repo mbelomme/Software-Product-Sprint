@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0px;
 }
 
 a {
@@ -48,13 +49,13 @@ a {
     position: fixed;
     bottom: 0;
     left: 2;
-    margin-bottom: 5px;
+    margin: 9px;
 }
 
 .sidebar img {
     width: 30px;
     height:30px;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
     display: block;
 }
 
@@ -96,6 +97,9 @@ a {
     color: dimgrey;
 }
 
+#home > h1 {
+    margin: 0px;
+}
 
 
 
@@ -138,7 +142,5 @@ a {
 
 
 /* Contact */
-
-
 
 
