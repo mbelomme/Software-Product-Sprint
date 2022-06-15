@@ -111,19 +111,37 @@ a {
 /* Experience */
 .jobs-sidebar {
     margin-right: 20px;
+    height: 200px;
 }
 
-.jobs-sidebar button{
+.jobs-sidebar button {
+    margin: 0px;
+    height: 25%;
+    font-size: 17px;
+    font-weight: regular;
+}
+
+.unclicked {
     display: block;
     border-style: none;
     border-left: solid;
+    border-left-color: black; 
     background-color: transparent;
-    margin: 0px;
+    color: black;
 }
 
-.jobs-sidebar button:hover {
-    color: green;
-    border-left-color: silver;
+.clicked {
+    display: block;
+    border-style: none;
+    border-left: solid;
+    border-left-color: darkturquoise; 
+    background-color: transparent;
+    color: darkturquoise;
+}
+
+.unclicked:hover, .clicked:hover {
+    color:darkturquoise;
+    background-color: burlywood;
 }
 
 .job-container {

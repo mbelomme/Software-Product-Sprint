@@ -13,28 +13,10 @@
 // limitations under the License.
 
 let shownJob = "Comcast";
-// let scrollingActive = false;
 
-// setInterval((changeStatement(), console.log, 700);
-console.log('after')
+
 
 // Header
-// document.getElementsByTagName('body').onscroll = function (){
-//     console.log("scrolled");
-//     document.getElementById('header').style.position = "sticky";
-// };
-
-
-// setInterval(() => {
-//     scrollingActive
-//     if (document.click == true) {
-//         console.log("scroll");
-//         document.querySelector('.header').style.position = "sticky";
-//     } if (false) {
-//         console.log("no scroll");
-//         document.querySelector('.header').style.position = "static";
-//     }
-// }, 300);
 
 
 
@@ -72,8 +54,8 @@ const address = fetch("./jobs.json")
 });
 
 function job(input){
-    document.getElementById(shownJob).style.backgroundColor = "transparent";
-    document.getElementById(input).style.backgroundColor = "coral";
+    document.getElementById(shownJob).classList.replace('clicked', 'unclicked');
+    document.getElementById(input).classList.replace('unclicked', 'clicked');
     getJob(input);
     shownJob = input;
 }
