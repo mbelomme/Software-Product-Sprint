@@ -160,5 +160,8 @@ a {
 
 
 /* Contact */
-
+textarea {
+    width: 100%;
+    font-size: 15px;
+}
 
