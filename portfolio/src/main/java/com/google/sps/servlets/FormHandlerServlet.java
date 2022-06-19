@@ -18,9 +18,9 @@ public class FormHandlerServlet extends HttpServlet {
     String message = request.getParameter("contact_message");
 
     // Print the value so you can see it in the server logs.
-    System.out.print(name + "submitted: " + message);
+    System.out.print(name + " submitted: " + message);
     if (email != null) {
-      System.out.print(" and they can be reached at " + email);
+      System.out.print(". They can be reached at " + email);
     }
     System.out.println();
 
