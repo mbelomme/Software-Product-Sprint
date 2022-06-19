@@ -13,12 +13,18 @@ public class FormHandlerServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     // Get the value entered in the form.
-    String textValue = request.getParameter("message");
+    String name = request.getParameter("contact_name");
+    String email = request.getParameter("contact_email");
+    String message = request.getParameter("contact_message");
 
     // Print the value so you can see it in the server logs.
-    System.out.println("You submitted: " + textValue);
+    System.out.print(name + "submitted: " + message);
+    if (email != null) {
+      System.out.print(" and they can be reached at " + email);
+    }
+    System.out.println();
 
     // Write the value to the response so the user can see it.
-    response.getWriter().println("You submitted: " + textValue);
+    response.getWriter().println("You submitted: " + message);
   }
 }
