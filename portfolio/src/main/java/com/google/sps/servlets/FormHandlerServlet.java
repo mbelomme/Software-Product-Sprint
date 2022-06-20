@@ -20,7 +20,7 @@ public class FormHandlerServlet extends HttpServlet {
     // Print the value so you can see it in the server logs.
     System.out.println("Name: " + name);
     if (email != null) {
-      System.out.print("Email: " + email);
+      System.out.println("Email: " + email);
     }
     System.out.println("Message: " + message);
 
