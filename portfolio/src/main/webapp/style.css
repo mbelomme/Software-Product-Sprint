@@ -18,6 +18,8 @@ a {
     padding-top: 2px;
     margin-bottom: 40px;
     top: 0;
+    position: sticky;
+    transition: transform 0.4s;
 }
 
 .header ol {
@@ -39,6 +41,14 @@ a {
     margin: 17px;
     max-width: 86px;
     max-height: 100%;
+}
+
+.showHeader {
+    transform: none;
+}
+
+.hideHeader {
+    transform: translate3d(0, -100%, 0);
 }
 
 
