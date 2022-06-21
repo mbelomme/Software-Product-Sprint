@@ -1,0 +1,35 @@
+{
+    "Comcast": {
+        "company": "Comcast",
+        "title": "Software Engineer Intern",
+        "date": "Fall 2022",
+        "description": ["Coming soon..."]
+    },
+
+    "Cisco": {
+        "company": "Cisco",
+        "title": "Software Engineer Intern",
+        "date": "May 2022 - Present",
+        "description": ["Coming soon..."]
+    },
+
+    "Google": {
+        "company": "Google",
+        "title": "Software Product Sprint Participant",
+        "date": "May 2022 - Present",
+        "description": ["Coming soon..."]
+    },
+
+    "Hack4Impact": {
+        "company": "Hack4Impact",
+        "title": "Junior Development Tech Lead",
+        "date": "September 2021 - Present",
+        "description": [
+            "Curated a project-based curriculum to introduce aspiring developers to the basics of full- stack development.",
+            "Facilitates weekly lectures to help students gain hands-on experience in HTML, CSS, JavaScript, React, Firebase, Node, MongoDB, and Git",
+            "Acquired frontend web development skills in HTML/CSS, JavaScript and React – emphasizing concepts like states, props, DOM, and JSON.",
+            "Developed backend using Flask and Python with API endpoints that allows frontend to communicate with backend.",
+            "Engineered a locally hosted web app to function with a Mongo database, Flask backend, HTML/CSS, and a third-party API."
+        ]
+    }
+}
