@@ -18,26 +18,28 @@ let lastPosition = 0;
 
 
 // Header
-document.addEventListener('scroll', () => {
+setInterval(() => document.addEventListener('scroll',  function displayHeader() {
     const currentPosition = window.pageYOffset;
 
     // When position at the top of the page, the transform style attribute
     if (currentPosition <= 0) {
-      document.getElementById('header').classList.remove('showHeader');
-      return;
+    document.getElementById('header').classList.remove('showHeader');
+    return;
     }
     // Scrolling down makes header disappear
     else if (currentPosition > lastPosition && !document.getElementById('header').classList.contains('hideHeader')) {
-      document.getElementById('header').classList.remove('showHeader');
-      document.getElementById('header').classList.add('hideHeader');
+    document.getElementById('header').classList.remove('showHeader');
+    document.getElementById('header').classList.add('hideHeader');
     } 
     // Scrolling up makes header appear
     else if (currentPosition < lastPosition && document.getElementById('header').classList.contains('hideHeader')) {
-      document.getElementById('header').classList.remove('hideHeader');
-      document.getElementById('header').classList.add('showHeader');
+    document.getElementById('header').classList.remove('hideHeader');
+    document.getElementById('header').classList.add('showHeader');
     }
     lastPosition = currentPosition;
-});
+
+    document.removeEventListener('scroll', displayHeader)
+}), 330);
 
 
 
