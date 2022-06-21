@@ -13,10 +13,31 @@
 // limitations under the License.
 
 let shownJob = "Comcast";
+let lastPosition = 0;
 
 
 
 // Header
+document.addEventListener('scroll', () => {
+    const currentPosition = window.pageYOffset;
+
+    // When position at the top of the page, the transform style attribute
+    if (currentPosition <= 0) {
+      document.body.classList.remove('showHeader');
+      return;
+    }
+    // Scrolling down makes header disappear
+    else if (currentPosition > lastPosition && !document.body.classList.contains('hideHeader')) {
+      document.body.classList.remove('showHeader');
+      document.body.classList.add('hideHeader');
+    } 
+    // Scrolling up makes header appear
+    else if (currentPosition < lastPosition && document.body.classList.contains('hideHeader')) {
+      document.body.classList.remove('hideHeader');
+      document.body.classList.add('showHeader');
+    }
+    lastPosition = currentPosition;
+});
 
 
 
