@@ -1,9 +1,164 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
 }
 
-#greeting-container {
-  margin-top: 20px;
+a {
+    text-decoration: none;
+}   
+
+
+
+/* Header */
+.header {
+    background-color: antiquewhite;
+    margin-right:0px;
+    margin-left: 0px;
+    padding-top: 2px;
+    margin-bottom: 40px;
+    top: 0;
 }
+
+.header ol {
+    float: right;
+    line-height: 43px;
+    margin: 17px;
+    font-size: 120%;
+    font-weight: 500;
+} 
+
+.header ol li {
+    list-style-type: decimal-leading-zero;
+    float: left;
+    margin-left: 40px;
+    margin-right: 17px;
+} 
+
+.header img {
+    margin: 17px;
+    max-width: 86px;
+    max-height: 100%;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 2;
+    margin: 9px;
+}
+
+.sidebar img {
+    width: 30px;
+    height:30px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+#sidebar-design {
+    height: 80px;
+}
+
+
+
+/* Content */
+.content {
+    width: 650px;
+    margin: auto;
+    height: 100%;
+}
+
+.sub-title {
+    display: inline;
+    margin-left: 10px;
+}
+
+.num {
+    display: inline-block;
+}
+
+.content > div {
+    min-height: 100vh;
+}
+
+
+
+/* Home */
+.home .name {
+    margin-bottom: 0px;
+}
+
+.statements {
+    margin: 0px;
+    color: dimgrey;
+}
+
+#home > h1 {
+    margin: 0px;
+}
+
+
+
+/* About */
+
+
+
+
+/* Experience */
+.jobs-sidebar {
+    margin-right: 20px;
+    height: 200px;
+}
+
+.jobs-sidebar button {
+    margin: 0px;
+    height: 25%;
+    font-size: 17px;
+    font-weight: regular;
+}
+
+.unclicked {
+    display: block;
+    border-style: none;
+    border-left: solid;
+    border-left-color: black; 
+    background-color: transparent;
+    color: black;
+}
+
+.clicked {
+    display: block;
+    border-style: none;
+    border-left: solid;
+    border-left-color: darkturquoise; 
+    background-color: transparent;
+    color: darkturquoise;
+}
+
+.unclicked:hover, .clicked:hover {
+    color:darkturquoise;
+    background-color: burlywood;
+}
+
+.job-container {
+    display: flex;
+}
+
+.job h3 {
+    display: inline;
+}
+
+
+
+/* Projects */
+
+
+
+
+/* Contact */
+
+
